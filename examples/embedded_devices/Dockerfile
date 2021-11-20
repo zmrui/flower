@@ -1,7 +1,9 @@
-ARG BASE_IMAGE_TYPE=cpu
+#ARG BASE_IMAGE_TYPE=cpu
 # these images have been pushed to Dockerhub but you can find
 # each Dockerfile used in the `base_images` directory 
-FROM jafermarq/jetsonfederated_$BASE_IMAGE_TYPE:latest
+#FROM jafermarq/jetsonfederated_$BASE_IMAGE_TYPE:latest
+
+FROM nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py3
 
 RUN apt-get install wget -y
 
